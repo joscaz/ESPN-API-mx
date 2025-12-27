@@ -12,7 +12,7 @@ Credits to: https://github.com/pseudo-r/Public-ESPN-API
 ### Get all teams
 ```http://site.api.espn.com/apis/site/v2/sports/soccer/mex.1/teams```
 
-#### Get specific team
+#### Get specific team in a season
 ``` https://sports.core.api.espn.com/v2/sports/soccer/leagues/mex.1/seasons/2025/teams/{team_id} ```
 | Team | ID | URL |
 | :---------------- | :------: | ----: |
@@ -35,6 +35,8 @@ Credits to: https://github.com/pseudo-r/Public-ESPN-API
 | FC Juárez | 17851 | https://sports.core.api.espn.com/v2/sports/soccer/leagues/mex.1/seasons/2025/teams/17851 |
 | Mazatlán FC | 20702 | https://sports.core.api.espn.com/v2/sports/soccer/leagues/mex.1/seasons/2025/teams/20702 |
 
+### Get general information from a team
+```https://site.api.espn.com/apis/site/v2/sports/soccer/mex.1/teams/{team_id}```
 
 ## Players
 ### Get all players (by id)
@@ -49,6 +51,9 @@ Note: Since API response has pagination for API responses use instead below API 
 ### Get statistics of a player in an specific season 
 ```http://sports.core.api.espn.com/v2/sports/soccer/leagues/mex.1/seasons/2025/types/2/athletes/{player_id}/statistics```
 
+### Get all statistics of a player
+```http://site.web.api.espn.com/apis/common/v3/sports/soccer/mex.1/athletes/{player_id}/statistics```
+
 ### Get all the events (matches) of a player
 ```http://sports.core.api.espn.com/v2/sports/soccer/leagues/mex.1/seasons/2025/athletes/{athlete_id}```
 
@@ -57,6 +62,9 @@ Note: Since API response has pagination for API responses use instead below API 
 
 ### Get all leagues where a player has participated
 ```http://sports.core.api.espn.com/v2/sports/soccer/athletes/{player_id}/leagues```
+
+### Get player overview
+```https://site.web.api.espn.com/apis/common/v3/sports/soccer/mex.1/athletes/{player_id}```
 
 ## Season
 Note: For example, Apertura 2025 and Clausura 2026 will be displayed in season 2025 wrapped together
@@ -68,3 +76,11 @@ Note: For example, Apertura 2025 and Clausura 2026 will be displayed in season 2
 
 Note: Since API response has pagination for API responses use instead below API call for best results
 ```https://sports.core.api.espn.com/v2/sports/soccer/leagues/mex.1/seasons/{year}/athletes?limit=1000```
+
+## News
+### Get news from the league
+```https://site.api.espn.com/apis/site/v2/sports/soccer/mex.1/news```
+
+## Scores
+### Get latest scores
+```https://site.api.espn.com/apis/site/v2/sports/soccer/mex.1/scoreboard```
