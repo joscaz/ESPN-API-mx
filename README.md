@@ -1,5 +1,5 @@
 # ESPN-API-mx
-Easy to digest un-official ESPN API documentation for Soccer Liga-MX 
+Easy to digest un-official ESPN API documentation for Soccer Liga-MX, but could be used for ALL leagues available from ESPN API.
 
 Credits to: https://github.com/pseudo-r/Public-ESPN-API
 
@@ -8,11 +8,12 @@ Credits to: https://github.com/pseudo-r/Public-ESPN-API
 
 ```https://site.api.espn.com/apis/site/v2/sports/soccer/mex.1/scoreboard```
 
+## Teams
 ### Get all teams
 ```http://site.api.espn.com/apis/site/v2/sports/soccer/mex.1/teams```
 
 #### Get specific team
-``` https://sports.core.api.espn.com/v2/sports/soccer/leagues/mex.1/seasons/2025/teams/{id}?lang=en&region=us ```
+``` https://sports.core.api.espn.com/v2/sports/soccer/leagues/mex.1/seasons/2025/teams/{team_id}?lang=en&region=us ```
 | Team              | ID | URL |
 | :---------------- | :------: | ----: |
 | Atlas | 216 | https://sports.core.api.espn.com/v2/sports/soccer/leagues/mex.1/seasons/2025/teams/216?lang=en&region=us |
@@ -35,8 +36,29 @@ Credits to: https://github.com/pseudo-r/Public-ESPN-API
 | Mazatlán FC | 20702 | https://sports.core.api.espn.com/v2/sports/soccer/leagues/mex.1/seasons/2025/teams/20702?lang=en&region=us |
 
 
-### Get all athletes (by id)
+## Players
+### Get all players (by id)
 ```https://sports.core.api.espn.com/v2/sports/soccer/leagues/mex.1/athletes?limit=1000```
 
+### Get all players of a specific team 
+```https://sports.core.api.espn.com/v2/sports/soccer/leagues/mex.1/seasons/2025/teams/{team_id}/athletes```
+
+Note: Since API response has pagination for API responses use instead below API call for best results
+```http://sports.core.api.espn.com/v2/sports/soccer/leagues/mex.1/seasons/2025/teams/232/athletes?limit=1000```
+
+### Get statistics of a player in an specific season 
+```http://sports.core.api.espn.com/v2/sports/soccer/leagues/mex.1/seasons/2025/types/2/athletes/{athlete_id}/statistics```
+
+### Get all the events (matches) of a player
+```http://sports.core.api.espn.com/v2/sports/soccer/leagues/mex.1/seasons/2025/athletes/{athlete_id}```
+
+### Get transactions (transfers) from a player
+```http://sports.core.api.espn.com/v2/sports/soccer/athletes/84854/transactions?lang=en&region=us```
+
+### Get all leagues where a player has participated
+```http://sports.core.api.espn.com/v2/sports/soccer/athletes/{athlete_id}/leagues```
+
+## Season
 ### Get all seasons (by year)
 ```https://sports.core.api.espn.com/v2/sports/soccer/leagues/mex.1/seasons```
+
