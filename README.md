@@ -13,7 +13,7 @@ Credits to: https://github.com/pseudo-r/Public-ESPN-API
 ```http://site.api.espn.com/apis/site/v2/sports/soccer/mex.1/teams```
 
 #### Get specific team
-``` https://sports.core.api.espn.com/v2/sports/soccer/leagues/mex.1/seasons/2025/teams/{team_id}?lang=en&region=us ```
+``` https://sports.core.api.espn.com/v2/sports/soccer/leagues/mex.1/seasons/2025/teams/{team_id} ```
 | Team | ID | URL |
 | :---------------- | :------: | ----: |
 | Atlas | 216 | https://sports.core.api.espn.com/v2/sports/soccer/leagues/mex.1/seasons/2025/teams/216 |
@@ -44,21 +44,27 @@ Credits to: https://github.com/pseudo-r/Public-ESPN-API
 ```https://sports.core.api.espn.com/v2/sports/soccer/leagues/mex.1/seasons/2025/teams/{team_id}/athletes```
 
 Note: Since API response has pagination for API responses use instead below API call for best results
-```http://sports.core.api.espn.com/v2/sports/soccer/leagues/mex.1/seasons/2025/teams/232/athletes?limit=1000```
+```http://sports.core.api.espn.com/v2/sports/soccer/leagues/mex.1/seasons/2025/teams/{team_id}/athletes?limit=1000```
 
 ### Get statistics of a player in an specific season 
-```http://sports.core.api.espn.com/v2/sports/soccer/leagues/mex.1/seasons/2025/types/2/athletes/{athlete_id}/statistics```
+```http://sports.core.api.espn.com/v2/sports/soccer/leagues/mex.1/seasons/2025/types/2/athletes/{player_id}/statistics```
 
 ### Get all the events (matches) of a player
 ```http://sports.core.api.espn.com/v2/sports/soccer/leagues/mex.1/seasons/2025/athletes/{athlete_id}```
 
 ### Get transactions (transfers) from a player
-```http://sports.core.api.espn.com/v2/sports/soccer/athletes/84854/transactions?lang=en&region=us```
+```http://sports.core.api.espn.com/v2/sports/soccer/athletes/{player_id}/transactions```
 
 ### Get all leagues where a player has participated
-```http://sports.core.api.espn.com/v2/sports/soccer/athletes/{athlete_id}/leagues```
+```http://sports.core.api.espn.com/v2/sports/soccer/athletes/{player_id}/leagues```
 
 ## Season
+Note: For example, Apertura 2025 and Clausura 2026 will be displayed in season 2025 wrapped together
 ### Get all seasons (by year)
 ```https://sports.core.api.espn.com/v2/sports/soccer/leagues/mex.1/seasons```
 
+### Get all players that participated in a season
+```https://sports.core.api.espn.com/v2/sports/soccer/leagues/mex.1/seasons/{year}/athletes```
+
+Note: Since API response has pagination for API responses use instead below API call for best results
+```https://sports.core.api.espn.com/v2/sports/soccer/leagues/mex.1/seasons/{year}/athletes?limit=1000```
