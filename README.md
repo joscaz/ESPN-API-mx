@@ -1,9 +1,9 @@
 # ESPN-API-mx
 Easy to digest un-official ESPN API documentation for Soccer Liga-MX, but could be used for ALL leagues available from ESPN API.
 
-Credits to: https://github.com/pseudo-r/Public-ESPN-API
+Please refer to: https://github.com/pseudo-r/Public-ESPN-API for more information from more sports, and leagues.
 
-## Base URL
+## General URL
 ```https://site.api.espn.com/apis/v2/sports/soccer/mex.1/standings```
 
 ```https://site.api.espn.com/apis/site/v2/sports/soccer/mex.1/scoreboard```
